@@ -1,0 +1,14 @@
+#rubiks-avatar-search{position:relative;display:flex;align-items:center;flex:1 1 260px;min-width:180px;max-width:360px;margin-left:auto;z-index:5}
+#rubiks-avatar-search:before{content:"";position:absolute;left:11px;top:10px;width:10px;height:10px;border:2px solid #a7a8ab;border-radius:50%;pointer-events:none}
+#rubiks-avatar-search:after{content:"";position:absolute;left:22px;top:21px;width:7px;height:2px;background:#a7a8ab;transform:rotate(45deg);transform-origin:left center;pointer-events:none}
+#rubiks-avatar-search input{box-sizing:border-box;width:100%;height:34px;padding:0 10px 0 33px;border:1px solid #454852;border-radius:7px;background:#202127;color:#f2f2f3;font-size:14px;outline:none}
+#rubiks-avatar-search input::placeholder{color:#f2f2f3;opacity:1}
+#rubiks-avatar-search input:focus{border-color:#737783;box-shadow:0 0 0 1px #737783}
+#rubiks-avatar-search-results{position:relative;z-index:2;display:grid;grid-template-columns:repeat(7,minmax(100px,1fr));gap:12px;width:100%;max-height:520px;overflow-y:auto;padding:8px 0;background:#111214}
+.rubiks-avatar-search-card{display:flex;flex-direction:column;gap:4px;min-width:0;color:#fff;text-decoration:none;font-size:12px;font-weight:500}
+.rubiks-avatar-search-image{display:flex;align-items:center;justify-content:center;aspect-ratio:1;border-radius:5px;background:#393b46;overflow:hidden}
+.rubiks-avatar-search-image img{width:100%;height:100%;object-fit:contain}
+.rubiks-avatar-search-card>span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rubiks-avatar-search-empty,.rubiks-avatar-search-loading{grid-column:1/-1;padding:16px;color:#c7c9d1;font-size:13px}
+@media (max-width:1100px){#rubiks-avatar-search-results{grid-template-columns:repeat(5,minmax(90px,1fr))}}
+@media (max-width:700px){#rubiks-avatar-search{min-width:0;width:100%;max-width:none;margin:8px 0}#rubiks-avatar-search input{flex:1;width:auto}#rubiks-avatar-search-results{grid-template-columns:repeat(3,minmax(80px,1fr))}}

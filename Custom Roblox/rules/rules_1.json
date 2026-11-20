@@ -1,0 +1,14 @@
+[{
+    "id": 1,
+    "priority": 2,
+    "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+            { 
+                "header": "content-security-policy", 
+                "operation": "set"
+            }
+        ],
+        "condition": { "urlFilter": "roblox.com", "resourceType": ["main_frame", "sub_frame"] }
+    }
+}]
